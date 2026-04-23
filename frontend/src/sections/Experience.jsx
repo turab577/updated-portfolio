@@ -2,9 +2,22 @@ import { useRef, useEffect, useState } from 'react'
 
 const experiences = [
   {
+  role: 'Front End Developer',
+  company: 'Kod X System',
+  period: 'April 2026 – Present',
+  location: 'DHA Phase 1, Lahore',
+  type: 'Full-Time',
+  points: [
+    'Architected and shipped new feature modules in React.js, collaborating closely with designers to refine UX flows before implementation.',
+    'Improved page load performance by identifying and eliminating unnecessary re-renders through memoization and lazy loading.',
+    'Owned the component library for an internal dashboard, ensuring consistency across multiple product views.',
+    'Debugged cross-browser layout issues and enforced code quality standards through peer code reviews.'
+  ]
+},
+  {
     role: 'Front End Developer',
     company: 'Vordx Technologies',
-    period: 'Sep 2025 – Present',
+    period: 'Sep 2025 – April 2026',
     location: 'DHA Phase 1, Lahore',
     type: 'Full-Time',
     points: [
