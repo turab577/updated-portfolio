@@ -33,7 +33,7 @@ const createTransporter = () => {
 }
 
 // POST /api/contact
-app.post('/api/contact', contactLimiter, async (req, res) => {
+app.post('/contact', contactLimiter, async (req, res) => {
   try {
     const { name, email, subject, message } = req.body
 
@@ -189,7 +189,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 })
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
 })
 
