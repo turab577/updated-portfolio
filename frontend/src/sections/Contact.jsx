@@ -56,7 +56,7 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { label: 'Email', val: 'abuturabhassankhan@gmail.com', href: 'mailto:abuturabhassankhan@gmail.com' },
+    { label: 'Email', val: 'abuturabhassankhan@gmail.com', href: 'mailto:abuturabhassankhan@gmail.com'  },
     { label: 'Phone', val: '+92 309-6806855', href: 'tel:+923096806855' },
     { label: 'Location', val: 'Model Town Q Block, Lahore', href: null },
     { label: 'LinkedIn', val: 'linkedin.com/in/abu-turab-hassan', href: 'https://linkedin.com/in/abu-turab-hassan-339840329' },
@@ -109,7 +109,10 @@ export default function Contact() {
                   textTransform: 'uppercase', marginBottom: '0.3rem'
                 }}>{label}</div>
                 {href ? (
-                  <a href={href} target={href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer"
+                  <a href={href} onClick = {label === 'Email' ? (e) => {
+    e.preventDefault();
+    window.open('https://mail.google.com/mail/?view=cm&to=abuturabhassankhan@gmail.com', '_blank');
+  } : undefined} target={href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer"
                     style={{
                       fontFamily: 'Syne, sans-serif', fontSize: '0.88rem',
                       color: 'var(--text-secondary)', borderBottom: '1px solid transparent',

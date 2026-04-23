@@ -64,6 +64,14 @@ export default function Navbar() {
         ))}
         <a
           href="mailto:abuturabhassankhan@gmail.com"
+           onClick={(e) => {
+    // fallback: if mailto fails silently, open Gmail
+    setTimeout(() => {
+      if (document.hasFocus()) {
+        window.open('https://mail.google.com/mail/?view=cm&to=abuturabhassankhan@gmail.com', '_blank')
+      }
+    }, 500)
+  }}
           style={{
             fontFamily: 'DM Mono, monospace', fontSize: '0.7rem',
             letterSpacing: '0.1em', color: 'var(--bg)',
