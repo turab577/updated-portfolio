@@ -5,12 +5,11 @@ const cors = require('cors')
 const rateLimit = require('express-rate-limit')
 
 const app = express()
-const PORT = process.env.PORT || 5000
 
 // Middleware
 app.use(express.json())
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: process.env.FRONTEND_URL || 'https://yourdomain.com',
   methods: ['POST', 'GET'],
   credentials: true
 }))
@@ -23,8 +22,6 @@ const contactLimiter = rateLimit({
 })
 
 // Nodemailer transporter
-// Using Gmail with App Password (recommended)
-// Set GMAIL_USER and GMAIL_APP_PASSWORD in .env
 const createTransporter = () => {
   return nodemailer.createTransport({
     service: 'gmail',
@@ -163,7 +160,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
               usually within 24 hours.
             </p>
             <p>In the meantime, feel free to check out my work at 
-              <a href="https://portfolio.vercel.app" style="color:#c8a96e;">portfolio.vercel.app</a>.
+              <a href="https://abuturabhassan.dev" style="color:#c8a96e;">abuturabhassan.dev</a>.
             </p>
             <div class="divider"></div>
             <p style="font-size:0.85rem; color:#5a5650;"><strong style="color:#9a9590;">Your message:</strong><br/>${safeMessage}</p>
@@ -184,6 +181,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     console.log(`[${new Date().toISOString()}] Contact form submitted by ${safeName} <${safeEmail}>`)
 
     res.status(200).json({ success: true, message: 'Message sent successfully!' })
+
   } catch (error) {
     console.error('Email error:', error)
     res.status(500).json({ success: false, message: 'Failed to send message. Please try again or email directly.' })
@@ -195,7 +193,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
 })
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Portfolio backend running on http://localhost:${PORT}`)
-  console.log(`📧 Email configured for: abuturabhassankhan@gmail.com\n`)
-})
+// ✅ CHANGED: Removed app.listen() — Vercel handles the server
+// ✅ CHANGED: Export app for Vercel serverless
+module.exports = app
