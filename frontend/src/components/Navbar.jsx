@@ -29,7 +29,6 @@ export default function Navbar() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         background: scrolled ? 'rgba(10,10,15,0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(200,169,110,0.08)' : 'none',
         transition: 'all 0.4s ease'
       }}
     >
