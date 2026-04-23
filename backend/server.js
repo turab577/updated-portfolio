@@ -165,7 +165,7 @@ app.post('/contact', contactLimiter, async (req, res) => {
             <div class="divider"></div>
             <div class="footer">
               Abu Turab Hassan · Frontend Developer · Lahore, Pakistan<br/>
-              abuturabhassankhan@gmail.com · +92 309-6806855
+              abuturabhassankhan@gmail.com · +92 316-7354746
             </div>
           </div>
         </body>

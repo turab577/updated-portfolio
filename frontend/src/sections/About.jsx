@@ -54,7 +54,7 @@ export default function About() {
               {[
                 { label: 'Location', val: 'Model Town Q, Lahore' },
                 { label: 'Email', val: 'abuturabhassankhan@gmail.com' },
-                { label: 'Phone', val: '+92 309-6806855' },
+                { label: 'Phone', val: '+92 316-7354746' },
               ].map(({ label, val }) => (
                 <div key={label}>
                   <div style={{
