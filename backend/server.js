@@ -159,9 +159,7 @@ app.post('/contact', contactLimiter, async (req, res) => {
               I've received your message and will get back to you as soon as possible — 
               usually within 24 hours.
             </p>
-            <p>In the meantime, feel free to check out my work at 
-              <a href="https://abuturabhassan.dev" style="color:#c8a96e;">abuturabhassan.dev</a>.
-            </p>
+            
             <div class="divider"></div>
             <p style="font-size:0.85rem; color:#5a5650;"><strong style="color:#9a9590;">Your message:</strong><br/>${safeMessage}</p>
             <div class="divider"></div>

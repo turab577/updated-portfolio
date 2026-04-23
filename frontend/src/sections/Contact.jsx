@@ -60,7 +60,7 @@ export default function Contact() {
     { label: 'Phone', val: '+92 309-6806855', href: 'tel:+923096806855' },
     { label: 'Location', val: 'Model Town Q Block, Lahore', href: null },
     { label: 'LinkedIn', val: 'linkedin.com/in/abu-turab-hassan', href: 'https://linkedin.com/in/abu-turab-hassan-339840329' },
-    { label: 'Portfolio', val: 'portfolio.vercel.app', href: 'https://portfolio.vercel.app' },
+    // { label: 'Portfolio', val: 'portfolio.vercel.app', href: 'https://portfolio.vercel.app' },
   ]
 
   return (
